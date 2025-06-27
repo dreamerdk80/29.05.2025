@@ -344,9 +344,9 @@ footer {
 }
 
 @media screen and (max-width: 1224px) {
-  .header-main {
-    padding: 40px;
-  }
+    .header-main {
+        padding: 40px;
+    }
 }
 
 @media screen and (max-width: 992px) {
