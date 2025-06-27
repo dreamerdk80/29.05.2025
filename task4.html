@@ -16,6 +16,13 @@
                 <img src="images/task4/icons/burger-menu.svg" alt="">
             </button>
 
+            <div style="top: -500px;" class="header-burger-menu">
+                <a href="#about">About us</a>
+                <a href="#events">Events</a>
+                <a href="#contact">Contact Us</a>
+                <button>BOOK</button>
+            </div>
+
             <a class="header-main-name" href="index.html">RIVERSIDE</a>
 
             <nav class="header-main-menu">
@@ -175,11 +182,28 @@
 
             <hr>
 
-            
+            <div class="footer-policy">
+                <a href="#">Legal Notice</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Cookie Accessability Policy</a>
+            </div>
+
+            <p class="footer-rights">Riverside Hotel 1997 -2002. All Rights Reserved.</p>
         </section>
     </footer>
 
-
+    <script>
+        const btn = document.querySelector(".header-main-burger")
+        const links = document.querySelector(".header-burger-menu")
+        btn.addEventListener("click", () => {
+            if (links.style.top == "-500px") {
+                links.style.top = "172px"
+            } else {
+                links.style.top = "-500px"
+            }
+        })
+    </script>
 </body>
 
 </html>

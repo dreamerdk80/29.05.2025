@@ -15,12 +15,44 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 70px 106px;
+    position: relative;
 }
 
 .header-main-burger {
     display: none;
     border: none;
     background: transparent;
+    cursor: pointer;
+}
+
+.header-burger-menu {
+    position: absolute;
+    left: 0;
+    background: white;
+    max-width: 992px;
+    width: 100%;
+    padding: 70px 106px;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.header-burger-menu a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header-burger-menu button {
+    padding: 10px 80px;
+    border: none;
+    background: #076BB2;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -293,6 +325,30 @@ footer {
     margin-bottom: 20px;
 }
 
+.footer-policy {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.footer-policy a {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+
+.footer-rights {
+    color: white;
+    font-weight: 100;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 1224px) {
+  .header-main {
+    padding: 40px;
+  }
+}
+
 @media screen and (max-width: 992px) {
     .header-main-burger {
         display: block;
@@ -317,6 +373,7 @@ footer {
 
     .events-cards {
         flex-direction: column;
+        padding: 0 106px;
     }
 
     .event-card {
@@ -325,13 +382,27 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .header-burger-menu {
+        flex-direction: column;
+    }
+
+    .events {
+        padding: 0 53px;
+    }
+
+    .events-cards {
+        padding: 0 53px;
+    }
+
     .form-fields {
         grid-template-columns: 1fr;
     }
 
     .footer-menu,
     .footer-social,
-    hr {
+    hr,
+    .footer-policy,
+    .footer-rights {
         display: none;
     }
 
@@ -340,9 +411,21 @@ footer {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 576px) {
+    .header-main {
+        padding: 70px 35px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
     .cards {
         width: 100%;
         margin: 10px;
+    }
+
+    .events-cards {
+        padding: 0;
     }
 }
