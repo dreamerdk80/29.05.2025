@@ -5,7 +5,5 @@ pictures.forEach(picture => {
     picture.addEventListener("click", () => {
         mainPicture.src = picture.src
         mainPicture.alt = picture.alt
-
-        console.log(mainPicture.src)
     })
 })
